@@ -1,6 +1,8 @@
 import { getDashboardStats } from "@/server-actions/dashboard/admin.dashboard";
 import { FiPackage, FiShoppingBag, FiUser } from "react-icons/fi";
 
+export const dynamic = "force-dynamic";
+
 export default async function Admin() {
   const { totalUsers, totalProducts, totalOrders } = await getDashboardStats();
   const stats = [

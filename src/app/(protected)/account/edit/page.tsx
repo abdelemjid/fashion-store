@@ -3,6 +3,8 @@ import BreadCrumb from "@/components/ui/BreadCrumb";
 import EditProfileForm from "@/components/user/EditProfileForm";
 import { getProfile } from "@/server-actions/user/user";
 
+export const dynamic = "force-dynamic";
+
 export default async function page() {
   const userProfile = await getProfile();
 

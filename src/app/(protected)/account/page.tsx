@@ -8,6 +8,8 @@ import { redirect } from "next/navigation";
 import { FaUser } from "react-icons/fa";
 import { FiLogOut, FiMapPin, FiPackage, FiUser } from "react-icons/fi";
 
+export const dynamic = "force-dynamic";
+
 export default async function page() {
   const userProfile = await getProfile();
 
