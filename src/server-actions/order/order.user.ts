@@ -256,8 +256,8 @@ export async function createStripeCheckoutSession(
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
       line_items: stripeLineItems,
-      success_url: `${process.env.NEXT_PUBLIC_APP_URL}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${process.env.NEXT_PUBLIC_APP_URL}/checkout`,
+      success_url: `${process.env.APP_URL}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${process.env.APP_URL}/checkout`,
       metadata: {
         appName: "Fashion",
         userId: currentUser.id,
